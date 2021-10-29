@@ -14,7 +14,7 @@ class SaladController extends Controller
      */
     public function index()
     {
-        //
+        return view('products.index');
     }
 
     /**
