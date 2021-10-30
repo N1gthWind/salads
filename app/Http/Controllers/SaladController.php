@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Salad;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +15,13 @@ class SaladController extends Controller
      */
     public function index()
     {
-        return view('products.index');
+        $salads = Salad::paginate(1);
+        
+        $saladCount = Salad::count();
+        return view('products.index',[
+            'salads' => $salads,
+            'saladCount' => $saladCount,
+        ]);
     }
 
     /**

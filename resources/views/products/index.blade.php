@@ -1,5 +1,89 @@
 @extends('layouts.app')
 
+@section('title', 'Products')
+
 @section('content')
-    <h1 style="text-align:center;">Ez lesz a termék megjelenitési oldal! 🤡</h1>
+<h1 class="product-title">Product catalog:</h1>
+<div class="custom-container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col">
+                    Showing all {{ $saladCount }} results
+                </div>
+
+                <div class="custom-col">
+                    <select class="product-form-control">
+                        <option value="">Default Sorting</option>
+                        <option value="popularity">Sorting by popularity</option>
+                        <option value="average">Sorting by average</option>
+                        <option value="latest">Sorting by latest</option>
+                        <option value="low">Sorting by low</option>
+                        <option value="high">Sorting by high</option>
+                    </select>
+                </div>
+
+            </div>
+            <!-- Sorting by <div class="row"> -->
+            <div class="row mt-5">
+                @forelse ($salads as $salad)
+                <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('images/' . $salad->image_path) }}" class="product-images">
+                            <h5 class="card-title"><b>{{ $salad->name }}</b></h5>
+                            <p class="card-text small">{{ $salad->description }}</p>
+                            <p class="tags">€{{ $salad->price }}</p>
+                            <p style="text-align: left;">Added: {{ $salad->created_at->format('Y.m.d') }}</p>
+                        </div>
+                    </div>
+                </div>
+                @empty
+                <h2>No data found!</h2>
+                @endforelse
+
+                <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('images/' . $salad->image_path) }}" class="product-images">
+                            <h5 class="card-title"><b>{{ $salad->name }}</b></h5>
+                            <p class="card-text small">{{ $salad->description }}</p>
+                            <p class="tags">€{{ $salad->price }}</p>
+                            <p style="text-align: left;">Added: {{ $salad->created_at->format('Y.m.d') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('images/' . $salad->image_path) }}" class="product-images">
+                            <h5 class="card-title"><b>{{ $salad->name }}</b></h5>
+                            <p class="card-text small">{{ $salad->description }}</p>
+                            <p class="tags">€{{ $salad->price }}</p>
+                            <p style="text-align: left;">Added: {{ $salad->created_at->format('Y.m.d') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('images/' . $salad->image_path) }}" class="product-images">
+                            <h5 class="card-title"><b>{{ $salad->name }}</b></h5>
+                            <p class="card-text small">{{ $salad->description }}</p>
+                            <p class="tags">€{{ $salad->price }}</p>
+                            <p style="text-align: left;">Added: {{ $salad->created_at->format('Y.m.d') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Sorting by <div class="row"> -->
+                
+        </div>
+        
+    </div>
+</div>
+{{ $salads->links() }}
 @endsection
