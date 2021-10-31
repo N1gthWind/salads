@@ -10,6 +10,16 @@ use Illuminate\Http\Request;
 class SaladController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(['auth','verified'])->only(['create','store','edit','update','destroy']);
+    }
+    
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

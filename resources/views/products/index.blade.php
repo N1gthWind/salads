@@ -11,18 +11,6 @@
                     <div class="col">
                         Showing all {{ $saladCount }} results
                     </div>
-
-                    <div class="custom-col">
-                        <select class="product-form-control">
-                            <option value="">Default Sorting</option>
-                            <option value="popularity">Sorting by popularity</option>
-                            <option value="average">Sorting by average</option>
-                            <option value="latest">Sorting by latest</option>
-                            <option value="low">Sorting by low</option>
-                            <option value="high">Sorting by high</option>
-                        </select>
-                    </div>
-
                 </div>
                 <!-- Sorting by <div class="row"> -->
                 <div class="row mt-5">

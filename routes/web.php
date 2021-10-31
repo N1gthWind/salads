@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SaladController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -14,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [SaladController::class, 'index']);
 
-Route::get('/',[SaladController::class, 'index']);
-
-Route::get('/logout',function() {
+Route::get('/logout', function () {
     abort(404);
 });
+
+Auth::routes(['verify' => true]);
+Route::resource('/products', SaladController::class);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::resource('/products', SaladController::class);
