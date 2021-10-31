@@ -9,8 +9,11 @@ class Salad extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "name","price","description","image_path"
+    ];
 
     protected $table = 'salads';
 
-    protected $primaryKey = 'salads_id';
+    protected $primaryKey = 'salad_id';
 }

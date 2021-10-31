@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[SaladController::class, 'index']);
 
-
+Route::get('/logout',function() {
+    abort(404);
+});
 
 Auth::routes();
 
