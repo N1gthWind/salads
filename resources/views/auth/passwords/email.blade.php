@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','Salad Email template')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

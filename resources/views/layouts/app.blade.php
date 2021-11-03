@@ -4,7 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jozsi and Pista">
+    <meta name="keywords" content="salads,fresh,high quality">
+    <meta name="description" content="Order vegan salads and chicken salads available
+        online at SaladsWebsite. Find various salads online from SaladsWebsite.
+         Choose from a wide range of soups available online.">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Order salad online. Order soups online available from SaladsWebsite">
+    <meta property="og:description"
+        content="Order vegan salads and chicken salads available online at SaladsWebsite. Find various salads online from SaladsWebsite. Choose from a wide range of soups available online.">
+    <meta property="og:url" content="https://salads.nhely.hu">
+    <meta property="og:image" content="{{ asset('images/salad.png') }}">
+    <meta property="og:site_name" content="SaladWebsite">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
@@ -15,7 +27,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -92,7 +104,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                             document.getElementById('logout-form').submit();">
+                                                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
