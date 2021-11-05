@@ -4,7 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jozsi and Pista">
+    <meta name="keywords" content="salads,fresh,high quality">
+    <meta name="description" content="Order vegan salads and chicken salads available
+        online at SaladsWebsite. Find various salads online from SaladsWebsite.
+         Choose from a wide range of soups available online.">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Order salad online. Order soups online available from SaladsWebsite">
+    <meta property="og:description"
+        content="Order vegan salads and chicken salads available online at SaladsWebsite. Find various salads online from SaladsWebsite. Choose from a wide range of soups available online.">
+    <meta property="og:url" content="https://salads.nhely.hu">
+    <meta property="og:image" content="{{ asset('images/salad.png') }}">
+    <meta property="og:site_name" content="SaladWebsite">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">

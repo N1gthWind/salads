@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SaladController;
+use App\Http\Controllers\SitemapXmlController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,8 @@ Route::get('/', [SaladController::class, 'index']);
 Route::get('/logout', function () {
     abort(404);
 });
+
+Route::get('/sitemap.xml', [SitemapXmlController::class,'index']);
 
 Auth::routes(['verify' => true]);
 Route::resource('/products', SaladController::class);
