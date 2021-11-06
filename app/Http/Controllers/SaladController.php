@@ -18,7 +18,7 @@ class SaladController extends Controller
     {
         // $this->middleware(['auth','verified'])->only(['create','store','edit','update','destroy']);
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +26,7 @@ class SaladController extends Controller
      */
     public function index()
     {
-        $salads = Salad::paginate(1);
+        $salads = Salad::paginate(3);
 
         $saladCount = Salad::count();
         return view('products.index', [
@@ -54,7 +54,7 @@ class SaladController extends Controller
     public function store(SaladRequest $request)
     {
 
-        
+
         $validatedData = $request->validate();
 
         if ($request->hasFile('image')) {
@@ -116,7 +116,7 @@ class SaladController extends Controller
      */
     public function update(SaladRequest $request, $id)
     {
-        
+
         $validatedData = $request->validated();
 
         $salad = Salad::findOrFail($id);

@@ -11,10 +11,31 @@
     width: 100%;
     height: 350px;
     object-fit: cover;
+    transition: .325s;
+}
+
+.product-images:hover{
+    filter: contrast(200%);
+    transform: scale(1.025);
+    transition: .325s;
+    border-radius: 10px;
 }
 
 .product-title {
     text-align: center;
+    color: #fff;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 10px #fff;
+}
+
+.cat{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color: #36454F;
+    border-radius: 10px 10px 0 0;
 }
 
 .custom-col {
@@ -50,8 +71,261 @@
 }
 
 .product-price {
-    color: #f33030;
-    font-weight: bold;
+    color: #EE4B2B;
+    font-weight: 900;
+    width: 150px;
+    background-color: #36454F;
     font-size: 25px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid #EE4B2B;
 }
 
+.card-text{
+    width: 100%;
+    height: 180px;
+    font-family: 'Ubuntu';
+    font-size: 18px;
+    overflow: auto;
+    color: #fff;
+    font-weight: 900;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+.card-title{
+    color: #fff;
+    text-shadow: 1px 1px 5px #fff;
+    margin-top:5px;
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+
+.auto{
+    text-align: center;
+    font-style: italic;
+}
+
+.card{
+    border-radius: 20px;
+    background-color: #36454F;
+}
+
+
+body html
+{
+    background-color: #555;
+    font-family: 'Ubuntu';
+}
+
+
+
+.inner-col{
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    display: block;
+    background-color: #25343e;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #fff;
+}
+
+.modBtn{
+    width: 20vw;
+    background-color: #fff;
+    color: #16161d ;
+    font-weight: 600;
+    margin-top: 30px;
+    border: 1px solid #16161d;
+}
+
+.modBtn:hover{
+    background-color: #16161d;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.date{
+    width: 150px;
+    background-color: #36454F;
+    padding-top: 10px;
+    color: #fff;
+    padding-bottom: 10px;
+    height: 42px;
+    border-radius: 0 0 5px 5px;
+    font-family: 'Ubuntu';
+    margin: auto;
+    border: 1px solid #fff;
+    font-weight: 600;
+}
+
+
+.saladNavbar{
+    background-color: #111 !important;
+    border-bottom:1px solid #fff;
+}
+
+#navbarDropdown{
+    color: #fff;
+}
+
+.nav-link{
+    color: #fff !important;
+    font-size: 25px;
+    font-family: 'Ubuntu';
+    transition: .325s;
+}
+
+.nav-link:hover{
+    text-shadow: 1px 1px 10px #fff;
+    transition: .325s;
+}
+
+.numberNav{
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+.page-item.disabled .page-link{
+    background-color: #16161d;
+    color: #fff;
+}
+
+.page-item.disabled:hover .page-link:hover{
+    background-color: #fff;
+    color: #16161d;
+}
+
+.page-item.active .page-link{
+    background-color: #36454F;
+    border-color: #fff !important;
+}
+
+.page-link{
+    background-color: #16161d ;
+    color: #fff;
+    border: #fff 1px solid;
+}
+
+.page-link:hover{
+    color: #16161d;
+}
+
+.sImg{
+    width: 100px;
+    transition: .325s;
+}
+
+.sImg:hover{
+    transform: scale(1.075);
+    transition: .325s;
+}
+
+
+.saladContainer{
+    margin: auto;
+    width: 1600px;
+}
+
+@media (max-width: 1700px)
+{
+    .saladContainer{
+       width: 1400px;
+    }
+}
+
+@media (max-width: 1450px){
+    .saladContainer{
+        width: 1200px;
+    }
+}
+
+@media (max-width: 1250px){
+    .saladContainer{
+        width: 1200px;
+    }
+}
+
+
+.navbar-toggle-icon{
+    color: #000;
+    background-color: #000;
+}
+
+.card-header{
+    border-bottom: 1px solid #fff;
+}
+
+.card-header, .email, .passW, .form-check-label, .Name, .passConf, .password, .email2{
+    color: #fff;
+}
+
+
+.forgotPass{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.forgotPass:hover{
+    color: #fff;
+    text-shadow: 1px 1px 10px #fff;
+}
+
+.loginBtn{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.loginBtn:hover{
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+
+.register{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.register:hover{
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+.Create{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.Create:hover{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+.form-control{
+    background-color: #50575c;
+    color: #fff;
+    text-align: center;
+}
+
+.form-control::placeholder{
+    color: #fff;
+}
+
+.form1{
+    color: #fff;
+}
