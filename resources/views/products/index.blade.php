@@ -22,7 +22,7 @@
                         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <img src="{{ asset('images/' . $salad->image_path) }}" class="product-images">
+                                    <img src="{{ asset('images/' . $salad->image_path) }}" alt="{{ $salad->name }}" class="product-images">
                                     <h5 class="card-title"><b>{{ $salad->name }}</b></h5>
                                     <p class="card-text small">{{ $salad->description }}</p>
                                     <p class="product-price" class="tags">€{{ $salad->price }}</p>
