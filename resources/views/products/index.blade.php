@@ -2,6 +2,10 @@
 
 @section('title', 'Products')
 
+@section('styling')
+    <link rel="stylesheet" href="{{ asset('css/product.index.css') }}">
+@endsection
+
 @section('content')
     <div class="cat">
         <h1 class="product-title">Product catalog:</h1>

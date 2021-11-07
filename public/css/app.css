@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -2981,16 +2980,16 @@ input[type=button].btn-block {
   display: none;
   float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
+  /* padding: 0.5rem 0; */
+  /* margin: 0.125rem 0 0; */
   font-size: 0.9rem;
-  color: #212529;
+  color: #fff;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #16161d;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border-radius: 0.55rem;
 }
 
 .dropdown-menu-left {
@@ -3136,16 +3135,19 @@ input[type=button].btn-block {
 }
 
 .dropdown-item {
+  border: 1px solid white;
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.55rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #fff;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
-  border: 0;
+  font-size: 18px;
+
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
