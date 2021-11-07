@@ -248,10 +248,32 @@ body html
 
 @media (max-width: 1250px){
     .saladContainer{
-        width: 1200px;
+        width: 95%;
     }
 }
 
+
+@media (max-width: 991px)
+{
+    .saladContainer{
+        width: 95%
+    }
+}
+
+@media (max-width: 330px)
+{
+    .inner-col{
+        margin: 0px;
+    }
+    .row{
+        width: 300px;
+        text-align: center;
+        margin: auto;
+    }
+    .cat{
+        text-align: center;
+    }
+}
 
 .navbar-toggle-icon{
     color: #000;
@@ -277,31 +299,23 @@ body html
     text-shadow: 1px 1px 10px #fff;
 }
 
-.loginBtn{
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000;
-}
-
-.loginBtn:hover{
+.loginBtn, .register{
     color: #fff;
     background-color: #000;
     border: 1px solid #fff;
+}
+
+.loginBtn:hover, .register:hover{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
 }
 
 
 .register{
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000;
     width: 100%;
 }
 
-.register:hover{
-    color: #fff;
-    background-color: #000;
-    border: 1px solid #fff;
-}
 
 .Create{
     background-color: #fff;
@@ -328,4 +342,18 @@ body html
 
 .form1{
     color: #fff;
+}
+
+
+.err1{
+    color: #EE4B2B;
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+}
+
+
+
+.ul1{
+    margin: 0px;
 }

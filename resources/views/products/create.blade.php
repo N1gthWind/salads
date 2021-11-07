@@ -31,9 +31,9 @@
 
                     </div>
                     @if ($errors->any())
-                        <div>
-                            <ul>
-                                <li>{{ $errors->all()[0] }}</li>
+                        <div class="div2">
+                            <ul class="ul1">
+                                <li class="err1">{{ $errors->all()[0] }}</li>
                             </ul>
                         </div>
                     @endif
