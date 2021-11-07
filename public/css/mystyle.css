@@ -16,7 +16,7 @@
 
 ::-webkit-scrollbar-track
 {
-	
+
 	border-radius: 10px;
 	background-color: #333232;
 }
@@ -30,7 +30,7 @@
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
 	background-color: #555;
 }
 
@@ -284,14 +284,18 @@ body html
 {
     .inner-col{
         margin: 0px;
-    }
-    .row{
-        width: 300px;
-        text-align: center;
-        margin: auto;
+        width: 80vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .cat{
         text-align: center;
+        width: 80vw;
+    }
+    .col{
+        width: max-content;
+        margin: 0;
     }
 }
 
@@ -305,9 +309,12 @@ body html
 }
 
 .card-header, .email, .passW, .form-check-label, .Name, .passConf, .password, .email2{
-    color: #fff;
+    color: #fff !important;
 }
 
+.email3{
+    color: #fff;
+}
 
 .forgotPass{
     border: 1px solid #fff;
@@ -319,23 +326,21 @@ body html
     text-shadow: 1px 1px 10px #fff;
 }
 
-.loginBtn, .register{
+.loginBtn, .register, .passRLink{
     color: #fff;
     background-color: #000;
     border: 1px solid #fff;
 }
 
-.loginBtn:hover, .register:hover{
+.loginBtn:hover, .register:hover, .passRLink:hover{
     color: #000;
     background-color: #fff;
     border: 1px solid #000;
 }
 
-
-.register{
+.register, .passRLink{
     width: 100%;
 }
-
 
 .Create{
     background-color: #fff;
@@ -348,7 +353,6 @@ body html
     color: #fff;
     border: 1px solid #fff;
 }
-
 
 .form-control{
     background-color: #50575c;
@@ -364,7 +368,6 @@ body html
     color: #fff;
 }
 
-
 .err1{
     color: #EE4B2B;
     text-align: center;
@@ -372,8 +375,12 @@ body html
     font-size: 20px;
 }
 
-
-
 .ul1{
     margin: 0px;
 }
+
+.alertCss{
+    background-color: #fff !important;
+    color: #000 !important;
+}
+

@@ -14,11 +14,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col">
                         <div class="inner-col">
                             Showing all {{ $saladCount }} results
                         </div>
-                    </div>
                 </div>
                 <!-- Sorting by <div class="row"> -->
                 <div class="saladContainer row mt-5">
