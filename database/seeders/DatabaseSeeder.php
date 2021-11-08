@@ -36,6 +36,18 @@ class DatabaseSeeder extends Seeder
                 "price" => 9.99,
                 "image_path" => "Green Salad with Chicken.jpg",
             ],
+            [
+                "created_at" => now(),
+                "updated_at" => now(),
+                "name" => "Buffalo Chicken Salad",
+                "description" => "Our Buffalo Chicken Salad features all your favorite game day flavors rolled over a bed of crispy greens. We combine shredded Buffalo chicken with crispy carrots, celery, grape tomatoes, and chopped romaine lettuce. Dressed with crumby Gorgonzola, pickled onions, and our blue cheese dressing, this salad is sure to satisfy the pickiest of eaters. So good, you won't miss the wings!
+
+                Delicious and convenient, our ready-to-go salads have been carefully planned, prepped, and packaged to maintain the quality of the ingredients, with a perfect portion of dressing on the side. Simply mix it up and enjoy!",
+                "price" => 6.99,
+                "image_path" => "1635633891-Buffalo Chicken Salad.jpg",
+            ],
+
+
         ];
         DB::table('salads')->insert($data);
     }
