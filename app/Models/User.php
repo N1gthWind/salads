@@ -21,6 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'ip_address',
     ];
 
     /**
@@ -41,4 +42,8 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function salad() {
+        return $this->hasMany(Salad::class,"id");
+    }
 }

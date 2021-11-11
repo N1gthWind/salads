@@ -18,11 +18,19 @@ class UserFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => "$2y$10\$Qs.tj3RpxYzTzBjgm8LaMO4DUClMv9ehRna.pN4z1NBDG/TzhzJha", // password
             'remember_token' => Str::random(10),
+            'ip_address' => $this->faker->ipv4(),
         ];
     }
+    public function customUser() {
 
+        return $this->state(function(){
+            return [
+                
+            ];
+        });
+    }
     /**
      * Indicate that the model's email address should be unverified.
      *

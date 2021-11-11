@@ -20,6 +20,11 @@ class CreateSaladsTable extends Migration
             $table->text('description');
             $table->decimal('price', 5, 2);
             $table->text('image_path');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 

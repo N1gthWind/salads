@@ -185,8 +185,8 @@ body html
 
 
 .saladNavbar{
-    background-color: #111 !important;
-    border-bottom:1px solid #fff;
+    background-color: #151b27 !important;
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 65%) !important;
 }
 
 #navbarDropdown{

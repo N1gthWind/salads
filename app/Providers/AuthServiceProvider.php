@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Salad;
+use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -24,7 +26,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-        //
+        
+        Gate::define('update-post', function (User $user, Salad $post) {
+            return $user->id === $post->user_id;
+        });
     }
 }

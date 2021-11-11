@@ -27,6 +27,6 @@ Route::get('/sitemap.xml', [SitemapXmlController::class,'index']);
 Auth::routes(['verify' => true]);
 Route::resource('/products', SaladController::class);
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
