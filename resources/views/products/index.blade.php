@@ -7,6 +7,13 @@
 @endsection
 
 @section('content')
+    
+    @if (Session::has('status'))
+
+
+    @endif
+
+
     <div class="cat">
         <h1 class="product-title">Product catalog:</h1>
     </div>
@@ -31,7 +38,7 @@
                                     <p class="product-price" class="tags">€{{ $salad->price }}</p>
                                     <p class="date">Added: {{ $salad->created_at->format('Y.m.d') }}</p>
                                     @auth
-                                        @can('posts.update',$salad)
+                                        @can('posts.update', $salad)
                                             <a class="modBtn btn btn-warning btn-lg "
                                                 href="{{ route('products.edit', ['product' => $salad->salad_id]) }}">Edit</a>
                                         @endcan
