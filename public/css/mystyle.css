@@ -113,7 +113,9 @@
     padding-right: 10px;
     text-align: justify;
 }
-
+.toast-message {
+    font-size: 18px;
+}
 .card-title{
     color: #fff;
     text-shadow: 1px 1px 5px #fff;

@@ -24,8 +24,15 @@ class LoginController extends Controller
     
     protected function authenticated(Request $request, $user)
     {
-        return redirect($this->redirectTo)
-            ->with('status', 'You are logged in');
+        $request->session()->flash('status','You have logged in!');
+        return redirect($this->redirectTo);  
+    }
+
+    protected function loggedOut(Request $request)
+    {
+        $request->session()->flash('status','You have logged out!');
+        return redirect('/');
+            
     }
 
     /**
