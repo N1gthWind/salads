@@ -4,7 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jozsi and Pista">
+    <meta name="keywords" content="salads,fresh,high quality">
+    <meta name="description" content="Order vegan salads and chicken salads available
+        online at SaladsWebsite. Find various salads online from SaladsWebsite.
+         Choose from a wide range of soups available online.">
 
+    <meta property="og:url" content="http://salads.nhely.hu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Order salad online. Order soups online available from SaladsWebsite" />
+    <meta property="og:description"
+        content="Order vegan salads and chicken salads available online at SaladsWebsite. Find various salads online from SaladsWebsite. Choose from a wide range of soups available online." />
+    <meta property="og:image" content="{{ asset('images/og_image/og_image.jpg') }}" />
+    <meta property="og:site_name" content="SaladWebsite" />
+
+    {{-- <meta property="og:type" content="website">
+    <meta property="og:title" content="Order salad online. Order soups online available from SaladsWebsite">
+    <meta property="og:description"
+        content="Order vegan salads and chicken salads available online at SaladsWebsite. Find various salads online from SaladsWebsite. Choose from a wide range of soups available online.">
+    <meta property="og:url" content="http://salads.nhely.hu">
+    <meta property="og:image" content="{{ asset('images/salad.png') }}">
+    <meta property="og:site_name" content="SaladWebsite"> --}}
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
@@ -166,7 +186,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                         document.getElementById('logout-form').submit();">
+                                                                                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -179,9 +199,9 @@
                         @endguest
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Str::upper(App::getLocale()) }}
-                                </a>
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Str::upper(App::getLocale()) }}
+                            </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item"
                                     href="{{ route(Route::currentRouteName(), ['locale' => 'en']) }}">EN</a>

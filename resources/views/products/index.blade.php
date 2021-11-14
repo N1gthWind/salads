@@ -8,12 +8,7 @@
 
 @section('content')
     
-    @if (Session::has('status'))
-
-
-    @endif
-
-    
+    <p style="color:white;text-align:center;font-size:20px">This is a school project</p>
     <div class="cat">
         <h1 class="product-title">{{ __('Product Catalog') }}</h1>
     </div>
