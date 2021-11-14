@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Toastr -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 
 
@@ -42,7 +42,7 @@
             }
             $(document).ready(function() {
                 // show when page load
-                toastr.success("{{ session("status") }}");
+                toastr.success("{{ session('status') }}");
             });
         </script>
     @endif
@@ -61,7 +61,8 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
     @yield('styling')
@@ -100,7 +101,6 @@
 </head>
 
 <body>
-
     <div id="app">
         <nav class="saladNavbar navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -144,6 +144,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+
                         @elseif (Auth::check())
                             @if (Route::has('products.create'))
                                 <li class="nav-item">
@@ -165,7 +166,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -176,6 +177,20 @@
                                 </div>
                             </li>
                         @endguest
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Str::upper(App::getLocale()) }}
+                                </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item"
+                                    href="{{ route(Route::currentRouteName(), ['locale' => 'en']) }}">EN</a>
+
+
+                                <a class="dropdown-item"
+                                    href="{{ route(Route::currentRouteName(), ['locale' => 'hu']) }}">HU</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

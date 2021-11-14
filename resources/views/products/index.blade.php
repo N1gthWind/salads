@@ -13,16 +13,16 @@
 
     @endif
 
-
+    
     <div class="cat">
-        <h1 class="product-title">Product catalog:</h1>
+        <h1 class="product-title">{{ __('Product Catalog') }}</h1>
     </div>
     <div class="custom-container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
                     <div class="inner-col">
-                        Showing all {{ $saladCount }} results
+                        {{ __('Showing all :count results',['count' => $saladCount]) }}
                     </div>
                 </div>
                 <!-- Sorting by <div class="row"> -->
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     @empty
-                        <h2>No data found!</h2>
+                        <h2>{{ __('No data found!') }}</h2>
                     @endforelse
                 </div>
                 <!-- Sorting by <div class="row"> -->
