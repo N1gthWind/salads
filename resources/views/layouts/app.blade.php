@@ -186,7 +186,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -202,14 +202,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Str::upper(App::getLocale()) }}
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item"
-                                    href="{{ route(Route::currentRouteName(), ['locale' => 'en']) }}">EN</a>
-
-
-                                <a class="dropdown-item"
-                                    href="{{ route(Route::currentRouteName(), ['locale' => 'hu']) }}">HU</a>
-                            </div>
+                            @yield('languages',View::make('templates.defaultsidebar'))
                         </li>
                     </ul>
                 </div>

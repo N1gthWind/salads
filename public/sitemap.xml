@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/vendor/sitemap/styles/xml.xsl" type="text/xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+	<url>
+	<loc>http://127.0.0.1:8000/products/1/edit</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products/2/edit</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products/3/edit</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products/4/edit</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products/5/edit</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products/6/edit</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/login</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/register</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+		<image:image>
+			<image:loc>http://127.0.0.1:8000/images/Greek Salad.jpg</image:loc>
+			<image:title>Greek Salads</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>http://127.0.0.1:8000/images/Green Salad with Chicken.jpg</image:loc>
+			<image:title>Green Salad with Chicken</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>http://127.0.0.1:8000/images/1635633891-Buffalo Chicken Salad.jpg</image:loc>
+			<image:title>Buffalo Chicken Salad</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>http://127.0.0.1:8000/images/Arugula Salad with Beets and Goat Cheese.jpg</image:loc>
+			<image:title>Arugula Salad with Beets and Goat Cheese</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>http://127.0.0.1:8000/images/Italian Chopped Salad.jpg</image:loc>
+			<image:title>Italian Chopped Salad</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>http://127.0.0.1:8000/images/SpinachAppleSalad.jpg</image:loc>
+			<image:title>Spinach Apple Salad</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/password/reset</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/email/verify</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/logout</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/products/create</loc>
+		<priority>1</priority>
+		<lastmod>2021-11-16T01:08:29+01:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+</urlset>
+

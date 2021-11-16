@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SaladRequest;
 use App\Models\Salad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\File;
+
 
 class SaladController extends Controller
 {
@@ -16,7 +19,7 @@ class SaladController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth','verified'])->only(['create','store','edit','update','destroy']);
+        $this->middleware(['auth', 'verified'])->only(['create', 'store', 'edit', 'update', 'destroy']);
     }
 
     /**
@@ -54,8 +57,7 @@ class SaladController extends Controller
     public function store(SaladRequest $request)
     {
 
-
-        $validatedData = $request->validate();
+        $validatedData = $request->validated();
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -70,11 +72,12 @@ class SaladController extends Controller
                 "name" => $request->get('name'),
                 "price" => $request->get('price'),
                 "description" => $request->get('description'),
-                "image_path" => $imageName
+                "image_path" => $imageName,
+                "user_id" => Auth::user()->id
             ]);
             $salad->save(); // Finally, save the record.
         } else {
-            dd($request);
+            // dd($request);
         }
 
 
@@ -91,7 +94,7 @@ class SaladController extends Controller
      */
     public function show($id)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -103,8 +106,8 @@ class SaladController extends Controller
     public function edit($id)
     {
         $salad = Salad::findOrFail($id);
-        
-        if (! Gate::allows('update-post', $salad)) {
+
+        if (!Gate::allows('update-post', $salad)) {
             abort(403, "You can't edit this product!");
         }
 
@@ -121,13 +124,31 @@ class SaladController extends Controller
     public function update(SaladRequest $request, $id)
     {
         $salad = Salad::findOrFail($id);
-        if (! Gate::allows('update-post', $salad)) {
+        if (!Gate::allows('update-post', $salad)) {
             abort(403, "You can't edit this product!");
         }
 
         $validatedData = $request->validated();
 
-       
+
+        if (request()->hasFile('image') && request('image') != '') {
+            $imagePath = public_path('images/' . $salad->image_path);
+            if (File::exists($imagePath)) { 
+                unlink($imagePath);
+            }
+            $image = $request->file('image');
+
+            $imageName = time() . "-" . $request->get('name') . '.' .
+                $image->extension();
+
+            $image->move(public_path('images'), $imageName);
+
+            $salad->update([
+                'image_path' => $imageName,
+            ]);
+        }
+
+
         $salad->fill($validatedData);
         $salad->save();
         $request->session()->flash('status', 'The product has been updated!');

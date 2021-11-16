@@ -22,7 +22,7 @@ Route::get('/logout', function () {
     abort(404);
 });
 
-Route::get('/sitemap.xml', [SitemapXmlController::class,'index']);
+Route::get('/sitemap', [SitemapXmlController::class,'index']);
 
 Auth::routes(['verify' => true]);
 Route::resource('/products', SaladController::class);
