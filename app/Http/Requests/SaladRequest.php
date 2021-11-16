@@ -28,7 +28,7 @@ class SaladRequest extends FormRequest
             'name' => 'bail|string|min:4|required|max:30',
             'description' => 'bail|string|min:10|required|max:1024',
             'price' => 'bail|regex:/^\d+(\.\d{1,2})?$/|required',
-            'image' => 'bail|image|mimes:png,jpg',
+            'image' => 'bail|image|mimes:png,jpg|required',
         ];
     }
 }

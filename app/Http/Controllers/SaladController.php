@@ -77,7 +77,14 @@ class SaladController extends Controller
             ]);
             $salad->save(); // Finally, save the record.
         } else {
-            // dd($request);
+            $salad = new Salad([
+                "name" => $request->get('name'),
+                "price" => $request->get('price'),
+                "description" => $request->get('description'),
+                "image_path" => null,
+                "user_id" => Auth::user()->id
+            ]);
+            $salad->save();
         }
 
 
