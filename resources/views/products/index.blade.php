@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     @empty
-                        <h2>{{ __('No data found!') }}</h2>
+                        <h2 style="color:white;text-align:center;width: 100%;">{{ __('No data found!') }}</h2>
                     @endforelse
                 </div>
                 <!-- Sorting by <div class="row"> -->
