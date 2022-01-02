@@ -7,7 +7,20 @@
 @endsection
 
 @section('content')
-   
+    <div class="banners">
+        <div class="banner">
+            <div class="bannerName">Blanka bőrkabát boltja</div>
+            <a class="linkBlanka" href="https://hungirl.proj.vts.su.ac.rs"><img class="Blanka" src="https://hungirl.proj.vts.su.ac.rs/assets/img/intr.jpg"></a>
+        </div>
+        <div class="banner">
+            <div class="bannerName">2</div>
+        </div>
+        <div class="banner">
+            <div class="bannerName">3</div>
+        </div>
+    </div>
+
+   <br><br>
     <p style="color:white;text-align:center;font-size:20px">This is a school project</p>
     <div class="cat">
         <h1 class="product-title">{{ __('Product Catalog') }}</h1>

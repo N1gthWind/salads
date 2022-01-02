@@ -387,3 +387,35 @@ body html
     color: #000 !important;
 }
 
+.banners{
+    margin: auto;
+    display: flex;
+    width: max-content;
+}
+
+.banner{
+    background-color: #36454F;
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.bannerName{
+    border-bottom: 1px solid #fff;
+    padding: 15px 0 15px 0;
+    color: #fff;
+    font-size: 19px;
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.Blanka{
+    width: 100%;
+    margin-top: 20%;
+}
+
