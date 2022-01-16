@@ -7,16 +7,19 @@
 @endsection
 
 @section('content')
+<div class="bannerCaption">Take a look at our partners!</div>
     <div class="banners">
         <div class="banner">
             <div class="bannerName">Blanka bőrkabát boltja</div>
             <a class="linkBlanka" href="https://hungirl.proj.vts.su.ac.rs"><img class="Blanka" src="https://hungirl.proj.vts.su.ac.rs/assets/img/intr.jpg"></a>
         </div>
         <div class="banner">
-            <div class="bannerName">2</div>
+            <div class="bannerName">Egészséges Ételek</div>
+            <a class="linkBlanka" href="https://beta.proj.vts.su.ac.rs/googlea/index.html"><img class="Blanka" src="https://beta.proj.vts.su.ac.rs/googlea/dan-gold-4_jhDO54BYg-unsplash.jpg"></a>
         </div>
         <div class="banner">
-            <div class="bannerName">3</div>
+            <div class="bannerName">Craft Beer</div>
+            <a class="linkBlanka" href="https://xy.proj.vts.su.ac.rs/analytics/"><img class="Blanka" src="https://xy.proj.vts.su.ac.rs/analytics/assets/img/beer-slider-2.jpg"></a>
         </div>
     </div>
 
